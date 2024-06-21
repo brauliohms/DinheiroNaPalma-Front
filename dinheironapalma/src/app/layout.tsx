@@ -21,7 +21,7 @@ export default function RootLayout({
         className={`${inter.className} antialiased bg-black min-h-dvh flex`}
       >
         <SideBar />
-        <main>{children}</main>
+        <main className="w-full container">{children}</main>
       </body>
     </html>
   );

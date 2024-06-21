@@ -1,7 +1,12 @@
+import { Header, Table, Vazio } from "@/components/Home";
+
 export default function Home() {
+  // Variavel apenas para inicio da implementação logica de mostrar listagem registros
+  const registros = true;
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 text-white">
-      <h1>Home</h1>
-    </main>
+    <section className="w-full flex min-h-screen flex-col items-center p-24 text-white gap-y-8">
+      <Header />
+      {registros ? <Table /> : <Vazio />}
+    </section>
   );
 }
