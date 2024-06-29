@@ -1,3 +1,16 @@
-export function Table() {
-  return <h1 className="text-white">Tabela</h1>;
+import { Registro } from "@/core";
+import { TableItem } from "./TableItem";
+
+interface TableProps {
+  registros: Registro[];
+}
+
+export function Table({ registros }: TableProps) {
+  return (
+    <section className="w-full px-24 flex flex-col gap-y-4">
+      {registros.map((registro) => (
+        <TableItem registro={registro} key={registro.id} />
+      ))}
+    </section>
+  );
 }

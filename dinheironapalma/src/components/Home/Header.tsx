@@ -1,12 +1,18 @@
 import { ChevronDownIcon, PlusCircleIcon } from "../Icons";
 
-export function Header() {
+interface HeaderProps {
+  quantidadeRegistros: number;
+}
+
+export function Header({ quantidadeRegistros }: HeaderProps) {
   return (
     <div className="flex items-center justify-between w-full px-24">
       <div>
         <h1 className="text-white font-bold text-3xl">Minhas Finanças</h1>
         <p className="text-white font-normal text-sm">
-          Você possui 4 registros
+          {quantidadeRegistros > 0
+            ? `Você possui ${quantidadeRegistros} registros`
+            : "Não possui registros"}
         </p>
       </div>
       <div className="flex gap-x-12">
@@ -14,7 +20,7 @@ export function Header() {
           <span className="font-bold">Filtrar por Status</span>
           <ChevronDownIcon className="size-5 text-purple-700 stroke-2" />
         </div>
-        <button className="btn-primary ">
+        <button className="btn-primary bg-minhacor">
           <PlusCircleIcon className="size-11 fill-white stroke-purple-700" />
           <span className="pr-4 font-semibold">Novo Registro</span>
         </button>
