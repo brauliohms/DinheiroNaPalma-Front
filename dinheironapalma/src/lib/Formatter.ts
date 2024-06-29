@@ -9,6 +9,13 @@ export class Formatter {
     });
   }
 
+  public static moneyNumberToDisplayCurrencyBRL(num: number) {
+    return num.toLocaleString("pt-br", {
+      style: "currency",
+      currency: "BRL",
+    });
+  }
+
   public static moneyStringToStore(num: string) {
     if (!num) return 0;
 
