@@ -1,8 +1,11 @@
+import Link from "next/link";
 import { ChevronDownIcon, PlusCircleIcon } from "../Icons";
 
 interface HeaderProps {
   quantidadeRegistros: number;
 }
+
+const URL_REGISTRO = process.env.NEXT_PUBLIC_PAGE_REGISTRO || "";
 
 export function Header({ quantidadeRegistros }: HeaderProps) {
   return (
@@ -20,10 +23,12 @@ export function Header({ quantidadeRegistros }: HeaderProps) {
           <span className="font-bold">Filtrar por Status</span>
           <ChevronDownIcon className="size-5 text-purple-700 stroke-2" />
         </div>
-        <button className="btn-primary bg-minhacor">
-          <PlusCircleIcon className="size-11 fill-white stroke-purple-700" />
-          <span className="pr-4 font-semibold">Novo Registro</span>
-        </button>
+        <Link href={URL_REGISTRO}>
+          <button className="btn-primary bg-minhacor">
+            <PlusCircleIcon className="size-11 fill-white stroke-purple-700" />
+            <span className="pr-4 font-semibold">Novo Registro</span>
+          </button>
+        </Link>
       </div>
     </div>
   );

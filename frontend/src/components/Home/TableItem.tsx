@@ -1,6 +1,7 @@
-import { Registro } from "registro";
-import { Formatter } from "common";
 import clsx from "clsx";
+import { Formatter } from "common";
+import Link from "next/link";
+import { Registro } from "registro";
 import {
   ArrowTrendingDownIcon,
   ArrowTrendingUpIcon,
@@ -11,6 +12,8 @@ import {
 interface TableItemProps {
   registro: Registro;
 }
+
+const URL_REGISTRO = process.env.NEXT_PUBLIC_PAGE_REGISTRO || "";
 
 export function TableItem({ registro }: TableItemProps) {
   return (
@@ -47,7 +50,7 @@ export function TableItem({ registro }: TableItemProps) {
               "text-green-500 bg-verdefundo": registro.status === "consolidado",
               "text-red-500 bg-vermelhofundo": registro.status === "cancelado",
               "text-yellow-500 bg-amarelofundo": registro.status === "pendente",
-            },
+            }
           )}
         >
           <span>
@@ -55,9 +58,9 @@ export function TableItem({ registro }: TableItemProps) {
           </span>
           {registro.status}
         </span>
-        <button type="button">
+        <Link href={`${URL_REGISTRO}/${registro.id}`}>
           <ChevronRightIcon className="size-5 hover:stroke-zinc-400 stroke-zinc-500 transitions" />
-        </button>
+        </Link>
       </div>
     </div>
   );
