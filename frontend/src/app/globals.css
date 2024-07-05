@@ -4,7 +4,7 @@
 
 @layer components {
   .btn {
-    @apply rounded-full text-white text-sm text-center transition flex items-center justify-between;
+    @apply rounded-full text-white text-sm text-center transition flex items-center justify-between font-medium;
   }
 
   .btn-primary {

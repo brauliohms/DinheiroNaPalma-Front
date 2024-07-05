@@ -1,3 +1,5 @@
+import { FormRegistro } from "@/components";
+
 export default function Page() {
-  return <h1 className="text-white">Registro</h1>;
+  return <FormRegistro />;
 }
