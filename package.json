@@ -1,0 +1,29 @@
+{
+  "name": "dinheironapalma",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brauliohms/DinheiroNaPalma-Front.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brauliohms/DinheiroNaPalma-Front/issues"
+  },
+  "homepage": "https://github.com/brauliohms/DinheiroNaPalma-Front#readme",
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "prettier": "^3.2.5"
+  },
+  "workspaces": [
+    "core/*",
+    "frontend/*"
+  ]
+}
