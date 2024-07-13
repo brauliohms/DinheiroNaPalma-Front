@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { Formatter } from "common";
+import { Formatter } from "common/src/Formatter";
 import Link from "next/link";
 import { Registro } from "registro";
 import {
@@ -41,7 +41,8 @@ export function TableItem({ registro }: TableItemProps) {
               <ArrowTrendingDownIcon className="size-5 stroke-red-500 stroke-2" />
             )}
           </span>
-          {Formatter.moneyNumberToDisplayCurrencyBRL(registro.valor)}
+          {registro.valor &&
+            Formatter.moneyNumberToDisplayCurrencyBRL(registro.valor)}
         </span>
         <span
           className={clsx(
@@ -50,7 +51,7 @@ export function TableItem({ registro }: TableItemProps) {
               "text-green-500 bg-verdefundo": registro.status === "consolidado",
               "text-red-500 bg-vermelhofundo": registro.status === "cancelado",
               "text-yellow-500 bg-amarelofundo": registro.status === "pendente",
-            }
+            },
           )}
         >
           <span>
