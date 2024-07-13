@@ -10,11 +10,13 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
+    "common": "*",
     "next": "14.2.4",
     "react": "^18",
     "react-dom": "^18",
-    "common": "*",
-    "registro": "*"
+    "react-hook-form": "^7.52.1",
+    "registro": "*",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^20",
