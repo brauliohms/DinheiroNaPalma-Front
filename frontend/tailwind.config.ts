@@ -12,6 +12,7 @@ const config: Config = {
         amarelofundo: "#373029",
         verdefundo: "#21322A",
         vermelhofundo: "#382529",
+        cinzafundo: "#222224",
       },
     },
   },
